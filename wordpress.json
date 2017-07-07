@@ -89,7 +89,7 @@
                             "chmod +x wp-cli.phar",
                             "sudo mv wp-cli.phar /usr/local/bin/wp",
                             "wp --allow-root core config --dbhost=${nodes.sqldb.address} --dbname=wordpress --dbuser=wp-db --dbpass=${globals.dbpassword} --path=${SERVER_WEBROOT}/ROOT",
-									          "wp --allow-root core install --title='' --admin_user=wp-admin --admin_password=${globals.adminpassword} --url=${env.url} --admin_email=${user.email} --path=${SERVER_WEBROOT}/ROOT",
+									          "wp --allow-root core install --title='Wordpress on Jelastic hosted by DCF' --admin_user=wp-admin --admin_password=${globals.adminpassword} --url=${env.url} --admin_email=${user.email} --path=${SERVER_WEBROOT}/ROOT",
 									          "sed -i \"/<?php/a if (strpos(\"'$_SERVER'\"['HTTP_X_FORWARDED_PROTO'], 'https') !== false) { \"'$_SERVER'\"['HTTPS']='on'; define('FORCE_SSL_ADMIN', true); }\" ${SERVER_WEBROOT}/ROOT/wp-config.php"
                           ]
                         }
