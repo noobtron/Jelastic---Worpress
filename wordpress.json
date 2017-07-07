@@ -1,10 +1,11 @@
 {
     "jpsVersion": "0.99",
     "jpsType": "install",
+    "build": "20170707",
     "application": {
         "id": "Wordpress - latest",
-        "name": "Wordpress - lastest - Beta",
-        "version": "lastest",
+        "name": "Wordpress - latest - Beta",
+        "version": "latest",
         "categories" : [
             "apps/blogs"
         ,"apps/content-management"],
@@ -18,7 +19,7 @@
             "topology": {
                 "ha": false,
                 "engine": "php7.0",
-                "ssl": false,
+                "ssl": true,
                 "nodes": [
                     {
                         "extip": false,
@@ -67,7 +68,8 @@
                         "user": "root",
                         "commands": [
                             "curl -fsSL 'https://raw.githubusercontent.com/noobtron/Jelastic-Wordpress/master/createDb.sh' -o /tmp/createDb.sh",
-                            "/bin/bash -x /tmp/createDb.sh ${nodes.sqldb.password} wordpress wp-db ${globals.dbpassword} 2>&1 1>>/tmp/createDatabase.log"
+                            "/bin/bash -x /tmp/createDb.sh ${nodes.sqldb.password} wordpress wp-db ${globals.dbpassword} 2>&1 1>>/tmp/createDatabase.log",
+                            "rm -f /tmp/createDb.sh"
                         ]
                       }
                    ]
