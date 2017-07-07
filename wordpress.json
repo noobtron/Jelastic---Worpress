@@ -66,7 +66,7 @@
                         "nodeType": "mariadb10",
                         "user": "root",
                         "commands": [
-                            "curl -fsSL 'https://raw.githubusercontent.com/jelastic-jps/wordpress/master/wordpress/scripts/createDb.sh' -o /tmp/createDb.sh",
+                            "curl -fsSL 'https://raw.githubusercontent.com/noobtron/Jelastic-Wordpress/master/createDb.sh' -o /tmp/createDb.sh",
                             "/bin/bash -x /tmp/createDb.sh ${nodes.sqldb.password} wordpress wp-db ${globals.dbpassword} 2>&1 1>>/tmp/createDatabase.log"
                         ]
                       }
