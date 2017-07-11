@@ -1,7 +1,7 @@
 {
     "jpsVersion": "0.99",
     "jpsType": "install",
-    "build": "20170707",
+    "build": "20170711",
     "application": {
         "id": "Wordpress - latest",
         "name": "Wordpress - latest",
