@@ -4,7 +4,7 @@
     "build": "20170707",
     "application": {
         "id": "Wordpress - latest",
-        "name": "Wordpress - latest - Beta",
+        "name": "Wordpress - latest",
         "version": "latest",
         "categories" : [
             "apps/blogs"
@@ -13,7 +13,7 @@
         "type": "php",
         "homepage": "http://wordpress.org/",
         "description": {
-            "text": "WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time."
+            "text": "<i>Latest build of WordPress on nginx + mariadb. Beta.</i></br>WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time."
         },
         "env": {
             "topology": {
